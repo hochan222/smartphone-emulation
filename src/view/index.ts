@@ -9,10 +9,10 @@ interface IgetNavigationWrapper {
 
 const getNavigationWrapper = ({ currentTime, backButton, newButton }: IgetNavigationWrapper) => {
   return `<nav>
-              ${backButton === undefined ? '' : backButton}
-              ${currentTime}
-              ${newButton === undefined ? '' : newButton}
-            </nav>`;
+            ${backButton === undefined ? '' : backButton}
+            ${currentTime}
+            ${newButton === undefined ? '' : newButton}
+          </nav>`;
 };
 
 const renderView = (): void => {

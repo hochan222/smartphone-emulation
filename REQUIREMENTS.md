@@ -17,6 +17,13 @@
 - [ ] 앱에서 “BACK” 버튼 클릭 시에 홈 화면 으로 이동
 - [ ] SPA(Single Page Application)로 코드 작성
 
+### Step 1
+
+- [x] 기본 폴더 구조 만들기
+- [x] 모바일 기기 layout 만들기
+
+### Step 2
+
 ### 홈 화면
 
 - Navigation

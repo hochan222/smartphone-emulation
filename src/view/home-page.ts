@@ -1,15 +1,15 @@
 import { $ } from '../@shared/utils';
 
-const getHomeWrapper = (navigation: string): string => {
+const homeWrapper = (navigation: string): string => {
   return `<div class="home">
             ${navigation}
-            <div class="app-inner">
+            <div class="home-inner">
             </div>
           </div>`;
 };
 
 const renderHomePage = (navigation: string): void => {
-  $('#app')?.insertAdjacentHTML('beforeend', getHomeWrapper(navigation));
+  $('.app')?.insertAdjacentHTML('beforeend', homeWrapper(navigation));
 };
 
 export default renderHomePage;
