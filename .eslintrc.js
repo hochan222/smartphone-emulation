@@ -15,6 +15,18 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  rules: {},
+  rules: {
+    // https://github.com/import-js/eslint-plugin-import/blob/v2.24.1/docs/rules/extensions.md
+    'import/extensions': ['off'],
+  },
   ignorePatterns: ['dist/', 'node_modules/', 'webpack.config.js'],
+  // https://github.com/import-js/eslint-plugin-import#resolvers
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        paths: ['./src'],
+      },
+    },
+  },
 };
