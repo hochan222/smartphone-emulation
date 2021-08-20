@@ -1,4 +1,9 @@
-const appDatas = [
+interface IappData {
+  name: string;
+  order: number;
+}
+
+const appInitDatas = [
   {
     name: '알람',
     order: 1,
@@ -13,4 +18,4 @@ const appDatas = [
   },
 ];
 
-export default appDatas;
+export { IappData, appInitDatas };
