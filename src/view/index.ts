@@ -1,4 +1,5 @@
 import renderHomePage from './home-page';
+import { getCurrentDate } from '../@shared/utils';
 
 interface IgetNavigationWrapper {
   currentTime: string;
@@ -15,7 +16,7 @@ const getNavigationWrapper = ({ currentTime, backButton, newButton }: IgetNaviga
 };
 
 const renderView = (): void => {
-  renderHomePage(getNavigationWrapper({ currentTime: '현재 시각 14시' }));
+  renderHomePage(getNavigationWrapper({ currentTime: getCurrentDate() }));
 };
 
 export default renderView;
