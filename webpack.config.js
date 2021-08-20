@@ -7,6 +7,7 @@ module.exports = {
     path: path.join(__dirname, '/dist'), // 번들 결과물 위치
     filename: 'bundle.js',
   },
+  mode: 'development', // bundling mode development / production
   module: {
     rules: [
       {
@@ -38,5 +39,4 @@ module.exports = {
     host: 'localhost', // live-server host, port
     port: 5500,
   },
-  mode: 'development', // bundling mode development / production
 };

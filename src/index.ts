@@ -1,5 +1,7 @@
-const button = document.getElementById('button');
+import renderView from './view/index';
 
-button?.addEventListener('click', () => {
-  button.innerText = 'holee-button';
-});
+const app = (): void => {
+  renderView();
+};
+
+app();
