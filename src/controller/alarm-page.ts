@@ -28,7 +28,7 @@ const clickAlarmListElementButton = (event: MouseEvent): void => {
   if (!eventTarget.classList.contains('alarm__list-element-button')) {
     return;
   }
-  model.removeLocalStorageAlarmData('alarmData', getElementIndex(eventTarget.parentElement as HTMLElement));
+  model.removeLocalStorageAlarmDataIndex('alarmData', getElementIndex(eventTarget.parentElement as HTMLElement));
   (eventTarget.parentNode as HTMLDivElement).remove();
 };
 

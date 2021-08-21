@@ -17,7 +17,7 @@ export default {
     }
     return JSON.parse(data);
   },
-  removeLocalStorageAlarmData(key: string, index: number): void {
+  removeLocalStorageAlarmDataIndex(key: string, index: number): void {
     const alarmData = this.getLocalStorageAlarmData('alarmData');
     if (!alarmData) {
       return;
@@ -25,4 +25,29 @@ export default {
     alarmData.splice(index, 1);
     localStorage.setItem(key, JSON.stringify([...alarmData]));
   },
+  removeLocalStorageAlarmData(key: string, alarmMeridiem: string, alarmHour: string, alarmMinute: string): void {
+    const alarmData = this.getLocalStorageAlarmData('alarmData');
+    if (!alarmData) {
+      return;
+    }
+    const index = alarmData.findIndex(({ meridiem, hour, minute }) => {
+      return alarmMeridiem === meridiem && alarmHour === hour && alarmMinute === minute;
+    });
+    if (index < 0) {
+      return;
+    }
+    alarmData.splice(index, 1);
+    localStorage.setItem(key, JSON.stringify([...alarmData]));
+  },
 };
+
+// removeLocalStorageAlarmData(key: string, alarmMeridiem: string, alarmHour: string, alarmMinute: string): void {
+//   const alarmData = this.getLocalStorageAlarmData('alarmData');
+//   if (!alarmData) {
+//     return;
+//   }
+//   const refinedAlarmData = alarmData.filter(({ meridiem, hour, minute }) => {
+//     return alarmMeridiem !== meridiem || alarmHour !== hour || alarmMinute !== minute;
+//   });
+//   localStorage.setItem(key, JSON.stringify([...refinedAlarmData]));
+// },

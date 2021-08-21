@@ -24,4 +24,12 @@ const getElementIndex = (element: HTMLElement): number => {
   return count;
 };
 
-export { $, $$, getCurrentDate, historyPushState, getElementIndex };
+const atoi = (str: string): string | undefined | null => {
+  const num = str.match(/\d+/g);
+  if (num && num.length > 0) {
+    return num[0];
+  }
+  return null;
+};
+
+export { $, $$, getCurrentDate, historyPushState, getElementIndex, atoi };

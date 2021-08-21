@@ -13,7 +13,7 @@ const meridiemOptionData = [
     option: '오후',
   },
 ];
-const hourOptionData = Array.from(Array(24), (_, index) => index + 1);
+const hourOptionData = Array.from(Array(12), (_, index) => index + 1);
 const minuteOptionData = Array.from(Array(6), (_, index) => index * 10);
 
 const optionWrapper = ({ option, value }: { option: string | number; value: string | number }): string => {
@@ -43,7 +43,9 @@ const alarmInputWrapper = (): string => {
 
 const alarmListElementWrapper = ({ meridiem, hour, minute }: IalarmData): string => {
   return `<div class="alarm__list-element">
-            <p>${meridiem === 'am' ? '오전' : '오후'} ${hour}시 ${minute}분</p>
+            <p>${meridiem === 'am' ? '오전' : '오후'} ${
+    meridiem === 'pm' ? String(+hour + 12) : hour.padStart(2, '0')
+  }시 ${minute.padStart(2, '0')}분</p>
             <button class="alarm__list-element-button" data-meridiem="${meridiem}" data-hour="${hour}" data-minute="${minute}">삭제</button>
           </div>`;
 };
