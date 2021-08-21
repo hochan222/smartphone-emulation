@@ -12,4 +12,12 @@ export default {
     }
     return JSON.parse(data);
   },
+  removeLocalStorageAlarmData(key: string, index: number): void {
+    const alarmData = this.getLocalStorageAlarmData('alarmData');
+    if (!alarmData) {
+      return;
+    }
+    alarmData.splice(index, 1);
+    localStorage.setItem(key, JSON.stringify([...alarmData]));
+  },
 };

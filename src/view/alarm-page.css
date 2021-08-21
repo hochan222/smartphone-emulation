@@ -58,7 +58,7 @@
   font-weight: 500;
 }
 
-.alarm__list-element .alarm__list-button {
+.alarm__list-element .alarm__list-element-button {
   margin-left: auto;
   margin-right: 5px;
   font-size: 0.7rem;

@@ -44,7 +44,7 @@ const alarmInputWrapper = (): string => {
 const alarmListElementWrapper = ({ meridiem, hour, minute }: IalarmData): string => {
   return `<div class="alarm__list-element">
             <p>${meridiem === 'am' ? '오전' : '오후'} ${hour}시 ${minute}분</p>
-            <button class="alarm__list-button">삭제</button>
+            <button class="alarm__list-element-button" data-meridiem="${meridiem}" data-hour="${hour}" data-minute="${minute}">삭제</button>
           </div>`;
 };
 

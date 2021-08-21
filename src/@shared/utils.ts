@@ -14,4 +14,14 @@ const historyPushState = (eventTarget: HTMLElement, title: string): void => {
   }
 };
 
-export { $, $$, getCurrentDate, historyPushState };
+const getElementIndex = (element: HTMLElement): number => {
+  let count = -1;
+  let elementSibling = element.previousSibling;
+  while (elementSibling != null) {
+    elementSibling = elementSibling.previousSibling;
+    count += 1;
+  }
+  return count;
+};
+
+export { $, $$, getCurrentDate, historyPushState, getElementIndex };

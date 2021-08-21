@@ -1,5 +1,5 @@
 import { historyRouterBack } from '../@shared/router';
-import { $ } from '../@shared/utils';
+import { $, getElementIndex } from '../@shared/utils';
 import { alarmInputWrapper, renderAlarmList } from '../view/alarm-page';
 import model from '../model';
 
@@ -23,9 +23,19 @@ const clickNavNewButton = (): void => {
   $('#alarm-submit-button')?.addEventListener('click', clickAlarmSubmitButton);
 };
 
+const clickAlarmListElementButton = (event: MouseEvent): void => {
+  const eventTarget = event.target as HTMLElement;
+  if (!eventTarget.classList.contains('alarm__list-element-button')) {
+    return;
+  }
+  model.removeLocalStorageAlarmData('alarmData', getElementIndex(eventTarget.parentElement as HTMLElement));
+  (eventTarget.parentNode as HTMLDivElement).remove();
+};
+
 const alarmPageController = (): void => {
   $('#nav-back-button')?.addEventListener('click', historyRouterBack);
   $('#nav-new-button')?.addEventListener('click', clickNavNewButton);
+  $('.alarm-inner')?.addEventListener('click', clickAlarmListElementButton);
 };
 
 export default alarmPageController;
