@@ -31,10 +31,14 @@
 - Home
   - [x] 아래 3개의 앱이 표시된다.
   - [x] 앱은 Drag & Drop 으로 서로 위치를 이동할 수 있어야 한다.
-  - [ ] 각 앱 버튼 클릭시 해당 앱 화면으로 이동한다.
+  - [x] 각 앱 버튼 클릭시 해당 앱 화면으로 이동한다.
+    - [ ] `http://localhost:5500/alarm` 상태에서 새로고침시 오류 해결하기.
+  - **drag event 사용**
 - Storage
   - [x] 앱의 위치는 Local Storage에 저장되어야 한다.
     - [x] 브라우저 Reload 후에도 앱이 바뀐 위치로 렌더링 된다.
+  - **LocalStorage API, histroy API, popstate event, dataset 사용**
+    - https://developer.mozilla.org/en-US/docs/Web/API/Location
 
 ### 앱 알림 화면
 

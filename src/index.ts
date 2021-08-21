@@ -1,4 +1,4 @@
-import renderView from './view/index';
+import { renderView } from './view/index';
 import initController from './controller/index';
 import './style.css';
 

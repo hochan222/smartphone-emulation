@@ -1,4 +1,6 @@
-import { $ } from '../@shared/utils';
+import { $, historyPushState } from '../@shared/utils';
+import { BROWSER_TITLE } from '../@shared/constants';
+import historyRouter from '../@shared/router';
 
 const dragstartAppIconButtons = (event: MouseEvent): void => {
   const eventTarget = event.target as HTMLButtonElement;
@@ -60,9 +62,18 @@ const dropAppIconButtons = (event: MouseEvent): void => {
       eventTarget.appendChild(draggingTarget);
       eventTarget.children[0].classList.toggle('dragenter', false);
     } else {
-      throw Error('drag에서 뭔가 잘못됨');
+      throw Error('[Drag] drag에서 노드 접근 에러');
     }
   }
+};
+
+const clickAppIconButtons = (event: MouseEvent): void => {
+  const eventTarget = event.target as HTMLElement;
+  if (!eventTarget.classList.contains('app-icon')) {
+    return;
+  }
+  historyPushState(eventTarget, BROWSER_TITLE);
+  historyRouter(eventTarget.dataset.route);
 };
 
 const homePageController = (): void => {
@@ -72,6 +83,7 @@ const homePageController = (): void => {
   $('.home-inner')?.addEventListener('dragenter', dragenterAppIconButtons);
   $('.home-inner')?.addEventListener('dragleave', dragleaveAppIconButtons);
   $('.home-inner')?.addEventListener('drop', dropAppIconButtons);
+  $('.home-inner')?.addEventListener('click', clickAppIconButtons);
 };
 
 export default homePageController;

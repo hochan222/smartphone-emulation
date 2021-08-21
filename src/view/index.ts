@@ -7,7 +7,7 @@ interface IgetNavigationWrapper {
   newButton?: string;
 }
 
-const getNavigationWrapper = ({ currentTime, backButton, newButton }: IgetNavigationWrapper) => {
+const getNavigationWrapper = ({ currentTime, backButton, newButton }: IgetNavigationWrapper): string => {
   return `<nav>
             ${backButton === undefined ? '' : backButton}
             ${currentTime}
@@ -19,4 +19,4 @@ const renderView = (): void => {
   renderHomePage(getNavigationWrapper({ currentTime: getCurrentDate() }));
 };
 
-export default renderView;
+export { renderView, getNavigationWrapper };
