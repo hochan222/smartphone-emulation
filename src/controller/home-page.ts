@@ -1,6 +1,6 @@
 import { $, historyPushState } from '../@shared/utils';
 import { BROWSER_TITLE } from '../@shared/constants';
-import historyRouter from '../@shared/router';
+import { historyRouter } from '../@shared/router';
 import model from '../model';
 
 const dragstartAppIconButtons = (event: MouseEvent): void => {

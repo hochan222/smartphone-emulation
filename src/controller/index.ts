@@ -1,4 +1,4 @@
-import historyRouter from '../@shared/router';
+import { historyRouter } from '../@shared/router';
 import homePageController from './home-page';
 
 const initController = (): void => {

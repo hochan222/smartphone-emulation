@@ -5,6 +5,9 @@ import renderMemoPage from '../view/memo-page';
 import renderPhotoPage from '../view/photo-page';
 import renderHomePage from '../view/home-page';
 import homePageController from '../controller/home-page';
+import alarmPageController from '../controller/alarm-page';
+import memoPageController from '../controller/memo-page';
+import photoPageController from '../controller/photo-page';
 
 const historyRouter = (route: string | undefined): void => {
   if (!route) {
@@ -14,12 +17,19 @@ const historyRouter = (route: string | undefined): void => {
     renderHomePage(getNavigationWrapper({ currentTime: getCurrentDate() }));
     homePageController();
   } else if (route === '/alarm') {
-    renderAlarmPage(getNavigationWrapper({ currentTime: getCurrentDate() }));
+    renderAlarmPage(getNavigationWrapper({ currentTime: getCurrentDate(), backButton: 'BACK', newButton: 'NEW' }));
+    alarmPageController();
   } else if (route === '/memo') {
-    renderMemoPage(getNavigationWrapper({ currentTime: getCurrentDate() }));
+    renderMemoPage(getNavigationWrapper({ currentTime: getCurrentDate(), backButton: 'BACK', newButton: 'NEW' }));
+    memoPageController();
   } else if (route === '/photo') {
-    renderPhotoPage(getNavigationWrapper({ currentTime: getCurrentDate() }));
+    renderPhotoPage(getNavigationWrapper({ currentTime: getCurrentDate(), backButton: 'BACK', newButton: 'NEW' }));
+    photoPageController();
   }
 };
 
-export default historyRouter;
+const historyRouterBack = (): void => {
+  window.history.back();
+};
+
+export { historyRouter, historyRouterBack };

@@ -1,0 +1,13 @@
+.nav__button {
+  padding: 2px 1px;
+  font-size: 0.6rem;
+  color: skyblue;
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.nav__time {
+  padding-left: 8px;
+  padding-right: 8px;
+}
