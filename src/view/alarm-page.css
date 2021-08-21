@@ -19,17 +19,17 @@
   font-size: 1rem;
 }
 
-.alarm__section {
+.alarm__input .alarm__select {
   flex: none;
   margin: 0px 3px;
   height: 1rem;
 }
 
-.alarm__section option {
+.alarm__input .alarm__select option {
   font-size: 0.3rem;
 }
 
-.alarm__button {
+.alarm__input .alarm__button {
   margin-left: auto;
   margin-right: 5px;
   font-size: 0.7rem;

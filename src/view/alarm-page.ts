@@ -18,8 +18,8 @@ const optionWrapper = ({ option, value }: { option: string | number; value: stri
   return `<option value="${value}">${option}</option>`;
 };
 
-const sectionWrapper = (sectionId: string, options: string): string => {
-  return `<select id="${sectionId}" class="alarm__section">
+const selectWrapper = (selectId: string, options: string): string => {
+  return `<select id="${selectId}" class="alarm__select">
             ${options}
           </select>`;
 };
@@ -30,12 +30,12 @@ const alarmInputWrapper = (): string => {
   const minuteOption = minuteOptionData.map((minute) => optionWrapper({ option: minute, value: minute })).join('');
 
   return `<div class="alarm__input">
-            ${sectionWrapper('alarm-meridiem-section', meridiemOption)}
-            ${sectionWrapper('alarm-hour-section', hourOption)} 
+            ${selectWrapper('alarm-meridiem-select', meridiemOption)}
+            ${selectWrapper('alarm-hour-select', hourOption)} 
             <p>시</p>
-            ${sectionWrapper('alarm-minute-section', minuteOption)}
+            ${selectWrapper('alarm-minute-select', minuteOption)}
             <p>분</p>
-            <button id="alarm-submit-buttom" class="alarm__button">저장</button>
+            <button id="alarm-submit-button" class="alarm__button">저장</button>
           </div>`;
 };
 
