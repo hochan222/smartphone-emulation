@@ -8,10 +8,11 @@ import alarmPageController from '../controller/alarm-page';
 import memoPageController from '../controller/memo-page';
 import photoPageController from '../controller/photo-page';
 import getNavigationWrapper from '../view/navigation';
+import { ROUTE_EMPTY_ERROR } from './constants';
 
 const historyRouter = (route: string | undefined): void => {
   if (!route) {
-    throw Error('[ROUTE] empty route');
+    throw Error(ROUTE_EMPTY_ERROR);
   }
   if (route === '/') {
     renderHomePage(getNavigationWrapper({ currentTime: getCurrentDate() }));

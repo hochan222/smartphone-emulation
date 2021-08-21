@@ -1,5 +1,5 @@
 import { $, historyPushState } from '../@shared/utils';
-import { BROWSER_TITLE } from '../@shared/constants';
+import { BROWSER_TITLE, HOME_DRAG_ERROR } from '../@shared/constants';
 import { historyRouter } from '../@shared/router';
 import model from '../model';
 
@@ -67,7 +67,7 @@ const dropAppIconButtons = (event: MouseEvent): void => {
       eventTarget.appendChild(draggingTarget);
       eventTarget.children[0].classList.toggle('dragenter', false);
     } else {
-      throw Error('[Drag] drag에서 노드 접근 에러');
+      throw Error(HOME_DRAG_ERROR);
     }
   }
 };

@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     // https://github.com/import-js/eslint-plugin-import/blob/v2.24.1/docs/rules/extensions.md
     'import/extensions': ['off'],
+    'no-alert': 'off',
   },
   ignorePatterns: ['dist/', 'node_modules/', 'webpack.config.js'],
   // https://github.com/import-js/eslint-plugin-import#resolvers
