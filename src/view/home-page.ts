@@ -4,7 +4,11 @@ import { IappData, appInitDatas } from '../model/app-datas';
 import model from '../model/index';
 
 const appIconWrapper = (appName: string): string => {
-  return `<button class="app-icon">${appName}</button>`;
+  return `<div class="dragzone">
+            <button class="app-icon draggable" draggable="true">
+            ${appName}
+            </button>
+          </div>`;
 };
 
 const homeWrapper = (navigation: string, apps: string): string => {

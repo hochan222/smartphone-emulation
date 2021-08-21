@@ -3,7 +3,6 @@
   height: 50px;
 
   font-size: 0.7rem;
-  margin: 1rem;
   border-radius: 10px;
   border: 1px solid white;
   background-color: white;
@@ -12,7 +11,25 @@
 .app-icon:hover {
   border: 3px solid black;
   cursor: grab;
-  /* grabbing */
+}
+
+.dragzone {
+  /* background-color: green; */
+  padding: 1rem;
+  margin: 1px;
+  width: 3rem;
+  height: 3rem;
+}
+
+.draggable {
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+}
+
+.dragenter {
+  border: 3px solid yellow;
 }
 
 .home-inner {
