@@ -1,4 +1,4 @@
-import { IappData } from './app-datas';
+import { IappData } from './interface';
 
 export default {
   setLocalStorageAppData(key: string, appDatas: IappData[]): void {

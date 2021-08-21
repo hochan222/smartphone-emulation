@@ -4,6 +4,7 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 8px;
+  padding-right: 8px;
 
   border-top: 1px solid blue;
   background-color: white;
@@ -37,6 +38,34 @@
   vertical-align: baseline;
   color: skyblue;
   border: 1px solid skyblue;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.alarm__list-element {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  border-top: 1px solid blue;
+
+  color: black;
+  background-color: white;
+}
+.alarm__list-element p {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.alarm__list-element .alarm__list-button {
+  margin-left: auto;
+  margin-right: 5px;
+  font-size: 0.7rem;
+  padding: 2px 1px;
+  vertical-align: baseline;
+  color: orangered;
+  border: 1px solid orangered;
   border-radius: 4px;
   background-color: white;
 }

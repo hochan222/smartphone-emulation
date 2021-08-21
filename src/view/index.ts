@@ -17,7 +17,7 @@ const getNavigationWrapper = ({ currentTime, backButton, newButton }: IgetNaviga
 };
 
 const renderView = (): void => {
-  renderHomePage(getNavigationWrapper({ currentTime: getCurrentDate(), backButton: 'BACK', newButton: 'NEW' }));
+  renderHomePage(getNavigationWrapper({ currentTime: getCurrentDate() }));
 };
 
 export { renderView, getNavigationWrapper };

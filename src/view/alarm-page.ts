@@ -1,4 +1,6 @@
 import { $ } from '../@shared/utils';
+import model from '../model';
+import { IalarmData } from '../model/interface';
 import './alarm-page.css';
 
 const meridiemOptionData = [
@@ -39,9 +41,20 @@ const alarmInputWrapper = (): string => {
           </div>`;
 };
 
+const alarmListElementWrapper = ({ meridiem, hour, minute }: IalarmData): string => {
+  return `<div class="alarm__list-element">
+            <p>${meridiem === 'am' ? '오전' : '오후'} ${hour}시 ${minute}분</p>
+            <button class="alarm__list-button">삭제</button>
+          </div>`;
+};
+
 const alarmListWrapper = () => {
+  const alarmData = model.getLocalStorageAlarmData('alarmData');
+  const alarmListTag = alarmData
+    ?.map(({ meridiem, hour, minute }) => alarmListElementWrapper({ meridiem, hour, minute }))
+    .join('');
   return `<div class="alarm__list">
-            list
+            ${alarmListTag}
           </div>`;
 };
 

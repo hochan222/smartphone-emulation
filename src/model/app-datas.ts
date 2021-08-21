@@ -1,9 +1,3 @@
-interface IappData {
-  name: string;
-  order: number;
-  route: string;
-}
-
 const appInitDatas = [
   {
     name: '알람',
@@ -22,4 +16,4 @@ const appInitDatas = [
   },
 ];
 
-export { IappData, appInitDatas };
+export default appInitDatas;

@@ -1,8 +1,4 @@
-interface IalarmData {
-  meridiem: string;
-  hour: string;
-  minute: string;
-}
+import { IalarmData } from './interface';
 
 export default {
   setLocalStorageAlarmData(key: string, appDatas: IalarmData): void {

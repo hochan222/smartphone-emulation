@@ -1,7 +1,8 @@
 import { $ } from '../@shared/utils';
 import './home-page.css';
-import { IappData, appInitDatas } from '../model/app-datas';
+import appInitDatas from '../model/app-datas';
 import model from '../model/index';
+import { IappData } from '../model/interface';
 
 const appIconWrapper = (appName: string, appRoute: string): string => {
   return `<div class="dragzone">
