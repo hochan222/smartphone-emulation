@@ -15,7 +15,7 @@ const homeWrapper = (navigation: string, apps: string): string => {
   return `<div class="home">
             ${navigation}
             <div class="home-inner">
-            ${apps}
+              ${apps}
             </div>
           </div>`;
 };

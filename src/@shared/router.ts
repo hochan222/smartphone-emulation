@@ -1,6 +1,6 @@
 import { getNavigationWrapper } from '../view';
 import { getCurrentDate } from './utils';
-import renderAlarmPage from '../view/alarm-page';
+import { renderAlarmPage } from '../view/alarm-page';
 import renderMemoPage from '../view/memo-page';
 import renderPhotoPage from '../view/photo-page';
 import renderHomePage from '../view/home-page';
