@@ -1,6 +1,6 @@
 import { historyRouterBack } from '../@shared/router';
 import { $ } from '../@shared/utils';
-import { alarmInputWrapper } from '../view/alarm-page';
+import { alarmInputWrapper, renderAlarmList } from '../view/alarm-page';
 import model from '../model';
 
 const clickAlarmSubmitButton = (): void => {
@@ -14,7 +14,7 @@ const clickAlarmSubmitButton = (): void => {
   };
   model.setLocalStorageAlarmData('alarmData', alarmData);
   $('.alarm__input')?.remove();
-  // TODO:: render alarmList
+  renderAlarmList();
 };
 
 const clickNavNewButton = (): void => {

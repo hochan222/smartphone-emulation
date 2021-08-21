@@ -1,4 +1,3 @@
-import { getNavigationWrapper } from '../view';
 import { getCurrentDate } from './utils';
 import { renderAlarmPage } from '../view/alarm-page';
 import renderMemoPage from '../view/memo-page';
@@ -8,6 +7,7 @@ import homePageController from '../controller/home-page';
 import alarmPageController from '../controller/alarm-page';
 import memoPageController from '../controller/memo-page';
 import photoPageController from '../controller/photo-page';
+import getNavigationWrapper from '../view/navigation';
 
 const historyRouter = (route: string | undefined): void => {
   if (!route) {

@@ -10,4 +10,10 @@ interface IappData {
   route: string;
 }
 
-export { IalarmData, IappData };
+interface IgetNavigationWrapper {
+  currentTime: string;
+  backButton?: string;
+  newButton?: string;
+}
+
+export { IalarmData, IappData, IgetNavigationWrapper };
