@@ -1,6 +1,7 @@
 import { $, historyPushState } from '../@shared/utils';
 import { BROWSER_TITLE } from '../@shared/constants';
 import historyRouter from '../@shared/router';
+import model from '../model';
 
 const dragstartAppIconButtons = (event: MouseEvent): void => {
   const eventTarget = event.target as HTMLButtonElement;
@@ -51,6 +52,8 @@ const dropAppIconButtons = (event: MouseEvent): void => {
     const draggedDragzone = draggingTarget?.parentNode as HTMLDivElement;
     const eventTargetDragzone = eventTarget?.parentNode as HTMLDivElement;
 
+    model.switchAppDataOrder(eventTarget.innerText, draggingTarget.innerText);
+
     draggedDragzone.appendChild(eventTarget);
     eventTargetDragzone.appendChild(draggingTarget);
     eventTarget.classList.toggle('dragenter', false);
@@ -58,6 +61,8 @@ const dropAppIconButtons = (event: MouseEvent): void => {
     const draggedDragzone = draggingTarget?.parentNode as HTMLDivElement;
 
     if (eventTarget?.children[0]) {
+      model.switchAppDataOrder((eventTarget.children[0] as HTMLButtonElement).innerText, draggingTarget.innerText);
+
       draggedDragzone.appendChild(eventTarget.children[0]);
       eventTarget.appendChild(draggingTarget);
       eventTarget.children[0].classList.toggle('dragenter', false);
