@@ -19,8 +19,8 @@
   - [ ] 실행 방법 작성
   - [ ] 모듈(파일) 구조 작성
   - [ ] 참고 사항 작성
-- [ ] 앱에서 “BACK” 버튼 클릭 시에 홈 화면 으로 이동
-- [ ] SPA(Single Page Application)로 코드 작성
+- [x] 앱에서 “BACK” 버튼 클릭 시에 홈 화면 으로 이동
+- [x] SPA(Single Page Application)로 코드 작성
 
 ### Step 1
 
