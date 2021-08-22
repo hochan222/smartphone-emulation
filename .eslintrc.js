@@ -20,7 +20,7 @@ module.exports = {
     'import/extensions': ['off'],
     'no-alert': 'off',
   },
-  ignorePatterns: ['dist/', 'node_modules/', 'webpack.config.js', 'webpack.production.config.js'],
+  ignorePatterns: ['dist/', 'node_modules/', 'webpack.config.js', 'webpack.production.config.js', 'cypress/'],
   // https://github.com/import-js/eslint-plugin-import#resolvers
   settings: {
     'import/resolver': {
