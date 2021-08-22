@@ -16,9 +16,15 @@ const clickPhotoScroll = (event: MouseEvent): void => {
   photoSelectImageElement.src = imageSrc;
 };
 
+const initPhotoPage = (): void => {
+  $('.photo-scroll-image[data-name="spider-man"]')?.click();
+  $('.photo-scroll')?.scrollTo(145, 0);
+};
+
 const photoPageController = (): void => {
   $('#nav-back-button')?.addEventListener('click', historyRouterBack);
   $('.photo-scroll')?.addEventListener('click', clickPhotoScroll);
+  initPhotoPage();
 };
 
 export default photoPageController;
