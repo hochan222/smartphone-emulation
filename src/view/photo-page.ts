@@ -19,13 +19,13 @@ const photoSelectWrapper = (): string => {
 };
 
 const photoWrapper = (navigation: string, scrollBar: string, selectImage: string): string => {
-  return `<div class="photo">
+  return `<section class="photo">
             ${navigation}
-            <div class="photo-inner">
+            <article class="photo-inner">
               ${scrollBar}
               ${selectImage}
-            </div>
-          </div>`;
+            </article>
+          </section>`;
 };
 
 const renderPhotoPage = (navigation: string): void => {

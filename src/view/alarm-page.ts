@@ -61,12 +61,12 @@ const alarmListWrapper = () => {
 };
 
 const alarmWrapper = (navigation: string, apps: string): string => {
-  return `<div class="alarm">
+  return `<section class="alarm">
             ${navigation}
-            <div class="alarm-inner">
+            <article class="alarm-inner">
               ${apps}
-            </div>
-          </div>`;
+            </article>
+          </section>`;
 };
 
 const renderAlarmList = (): void => {

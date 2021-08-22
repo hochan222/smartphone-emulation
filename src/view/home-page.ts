@@ -13,12 +13,12 @@ const appIconWrapper = (appName: string, appRoute: string): string => {
 };
 
 const homeWrapper = (navigation: string, apps: string): string => {
-  return `<div class="home">
+  return `<section class="home">
             ${navigation}
             <nav class="home-inner">
               ${apps}
             </nav>
-          </div>`;
+          </section>`;
 };
 
 // 코드 수정시 LocalStorage가 존재해서, Update 사항이 반영되지 않는 위험이 있음.

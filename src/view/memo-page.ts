@@ -17,12 +17,12 @@ const memoListWrapper = (): string => {
 };
 
 const memoWrapper = (navigation: string, apps: string): string => {
-  return `<div class="memo">
+  return `<section class="memo">
             ${navigation}
-            <div class="memo-inner">
+            <article class="memo-inner">
               ${apps}
-            </div>
-          </div>`;
+            </article>
+          </section>`;
 };
 
 const renderMemoList = (): void => {

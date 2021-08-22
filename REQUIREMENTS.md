@@ -8,7 +8,8 @@
 - [x] polyfill, webpack, Testing framework 외의 다른 패키지 사용 금지
 - [ ] 적절한 마크업 구조 및 태그 사용
   - [x] nav
-  - [ ] article
+  - [x] article
+  - [x] section
 - 검토 사항
   - [ ] 테스트 코드 작성
   - [ ] 코드 구조, 코딩 스타일 리펙토링
