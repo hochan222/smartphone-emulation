@@ -1,5 +1,5 @@
 import { $ } from '../@shared/utils';
-import { images } from '../assets/index';
+import { images, thorRagnarok } from '../assets/index';
 import './photo-page.css';
 
 const imageTagWrapper = ({ src, name }: { src: string; name: string }): string => {
@@ -12,12 +12,18 @@ const photoScrollWrapper = (): string => {
           </div>`;
 };
 
-const photoWrapper = (navigation: string, apps: string): string => {
+const photoSelectWrapper = (): string => {
+  return `<div class="photo-select">
+            <image class="photo-select-image" src="${thorRagnarok}"/>
+          </div>`;
+};
+
+const photoWrapper = (navigation: string, scrollBar: string, selectImage: string): string => {
   return `<div class="photo">
             ${navigation}
             <div class="photo-inner">
-              ${apps}
-              photo
+              ${scrollBar}
+              ${selectImage}
             </div>
           </div>`;
 };
@@ -26,7 +32,7 @@ const renderPhotoPage = (navigation: string): void => {
   const appId = $('#app') as HTMLDivElement;
 
   appId.innerHTML = '';
-  appId.insertAdjacentHTML('beforeend', photoWrapper(navigation, photoScrollWrapper()));
+  appId.insertAdjacentHTML('beforeend', photoWrapper(navigation, photoScrollWrapper(), photoSelectWrapper()));
 };
 
 export default renderPhotoPage;

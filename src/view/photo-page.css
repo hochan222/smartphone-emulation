@@ -11,3 +11,18 @@
   border-radius: 10px;
   margin: 0 16px;
 }
+
+.photo-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 408px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: black;
+  overflow: hidden;
+}
+
+.photo-select-image {
+  width: 100%;
+}
