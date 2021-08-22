@@ -3,12 +3,20 @@ nav {
 }
 
 .nav__button {
+  cursor: pointer;
   padding: 2px 1px;
   font-size: 0.6rem;
   color: skyblue;
   border: 1px solid skyblue;
   border-radius: 3px;
   background-color: white;
+}
+
+.nav__button--block {
+  cursor: default;
+  color: #4e75c1;
+  border: 1px solid #4e75c1;
+  background-color: #4e75c1;
 }
 
 .nav__time {

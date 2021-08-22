@@ -1,4 +1,4 @@
-import { getCurrentDate } from './utils';
+import { $, getCurrentDate } from './utils';
 import { renderAlarmPage } from '../view/alarm-page';
 import { renderMemoPage } from '../view/memo-page';
 import renderPhotoPage from '../view/photo-page';
@@ -25,6 +25,9 @@ const historyRouter = (route: string | undefined): void => {
     memoPageController();
   } else if (route === '/photo') {
     renderPhotoPage(getNavigationWrapper({ currentTime: getCurrentDate(), backButton: 'BACK', newButton: 'NEW' }));
+    const navNewButtonElement = $('#nav-new-button') as HTMLButtonElement;
+    navNewButtonElement.classList.toggle('nav__button--block', true);
+    navNewButtonElement.disabled = true;
     photoPageController();
   }
 };
