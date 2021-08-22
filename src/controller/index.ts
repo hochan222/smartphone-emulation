@@ -15,8 +15,8 @@ const NotifyAlarm = (currentDate: string): void => {
   const alarmData = model.getLocalStorageAlarmData('alarmData');
   alarmData?.forEach(({ meridiem, hour, minute }): void => {
     if (
-      (meridiem === 'pm' || 'am') &&
-      hour === (meridiem === 'pm' ? String(+currentHour + 12) : currentHour) &&
+      (meridiem === 'pm' || meridiem === 'am') &&
+      hour === (meridiem === 'pm' ? String(+currentHour - 12) : currentHour) &&
       minute === currentMinute
     ) {
       alert(`[알림] ${meridiem === 'pm' ? '오후' : '오전'} ${currentHour}시 ${currentMinute}분입니다.`);
