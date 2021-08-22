@@ -41,6 +41,12 @@ describe('home page test code', () => {
     appList.forEach((app) => dragEnterTest(app));
   });
   it('알람앱을 사진앱 영역에 드레그 앤 드롭할 때, 알람앱과 사진앱의 위치가 변경된다.', () => {
-    dragTest('알람', 300, 150);
+    // dragTest('알람', '300', '150');
+    // cy.get('.app-icon')
+    //   .contains('알람')
+    //   .trigger('mousedown', { which: 1, pageX: 600, pageY: 100 })
+    //   .trigger('mousemove', { which: 1, pageX: 600, pageY: 600 })
+    //   .trigger('mouseup');
+    // cy.get('.app-icon').contains('메모').getBoundingClientRect();
   });
 });
