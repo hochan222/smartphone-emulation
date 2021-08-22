@@ -3,7 +3,7 @@
 ## 실행 방법 작성
 
 ```bash
-git clone https://github.com/hochan222/smartphone-emulation.git && npm install && npm start
+git clone https://github.com/hochan222/smartphone-emulation.git && cd smartphone-emulation && npm install && npm start
 ```
 
 ## 모듈(파일) 구조 작성
