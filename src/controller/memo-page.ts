@@ -38,7 +38,7 @@ const clickMemoList = (event: MouseEvent): void => {
 const memoPageController = (): void => {
   $('#nav-back-button')?.addEventListener('click', historyRouterBack);
   $('#nav-new-button')?.addEventListener('click', clickNavNewButton);
-  $('.memo__list')?.addEventListener('click', clickMemoList);
+  $('.memo')?.addEventListener('click', clickMemoList);
 };
 
 export default memoPageController;
