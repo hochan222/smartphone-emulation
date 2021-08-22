@@ -1,9 +1,11 @@
 import { $ } from '../@shared/utils';
+import webpack from '../assets/webpack.png';
 
 const photoWrapper = (navigation: string): string => {
   return `<div class="photo">
             ${navigation}
             <div class="photo-inner">
+              <img src="${webpack}"/>
               photo
             </div>
           </div>`;

@@ -32,4 +32,8 @@ const atoi = (str: string): string | undefined | null => {
   return null;
 };
 
-export { $, $$, getCurrentDate, historyPushState, getElementIndex, atoi };
+const padStart = (targetLength: number, padString: string, str: string): string => {
+  return str.length >= targetLength ? str : new Array(targetLength - str.length + 1).join(padString) + str;
+};
+
+export { $, $$, getCurrentDate, historyPushState, getElementIndex, atoi, padStart };

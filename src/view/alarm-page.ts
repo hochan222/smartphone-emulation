@@ -1,4 +1,4 @@
-import { $ } from '../@shared/utils';
+import { $, padStart } from '../@shared/utils';
 import model from '../model';
 import { IalarmData } from '../model/interface';
 import './alarm-page.css';
@@ -44,8 +44,8 @@ const alarmInputWrapper = (): string => {
 const alarmListElementWrapper = ({ meridiem, hour, minute }: IalarmData): string => {
   return `<div class="alarm__list-element">
             <p>${meridiem === 'am' ? '오전' : '오후'} ${
-    meridiem === 'pm' ? String(+hour + 12) : hour.padStart(2, '0')
-  }시 ${minute.padStart(2, '0')}분</p>
+    meridiem === 'pm' ? String(+hour + 12) : padStart(2, '0', hour)
+  }시 ${padStart(2, '0', minute)}분</p>
             <button class="alarm__list-element-button" data-meridiem="${meridiem}" data-hour="${hour}" data-minute="${minute}">삭제</button>
           </div>`;
 };
