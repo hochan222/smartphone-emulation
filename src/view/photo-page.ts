@@ -8,7 +8,7 @@ const imageTagWrapper = ({ src, name }: { src: string; name: string }): string =
 
 const photoScrollWrapper = (): string => {
   return `<div class="photo-scroll">
-            ${images.map(({ name, src }) => imageTagWrapper({ name, src }))}
+            ${images.map(({ name, src }) => imageTagWrapper({ name, src })).join('')}
           </div>`;
 };
 
