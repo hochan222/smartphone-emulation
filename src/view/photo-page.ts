@@ -1,5 +1,5 @@
 import { $ } from '../@shared/utils';
-import { images, thorRagnarok } from '../assets/index';
+import { images, spiderMan } from '../assets/index';
 import './photo-page.css';
 
 const imageTagWrapper = ({ src, name }: { src: string; name: string }): string => {
@@ -14,7 +14,7 @@ const photoScrollWrapper = (): string => {
 
 const photoSelectWrapper = (): string => {
   return `<div class="photo-select">
-            <image class="photo-select-image" src="${thorRagnarok}"/>
+            <image class="photo-select-image" src="${spiderMan}"/>
           </div>`;
 };
 
