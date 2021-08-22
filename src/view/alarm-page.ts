@@ -13,7 +13,7 @@ const meridiemOptionData = [
     option: '오후',
   },
 ];
-const hourOptionData = Array.from(Array(12), (_, index) => index + 1);
+const hourOptionData = Array.from(Array(12), (_, index) => index);
 const minuteOptionData = Array.from(Array(6), (_, index) => index * 10);
 
 const optionWrapper = ({ option, value }: { option: string | number; value: string | number }): string => {
