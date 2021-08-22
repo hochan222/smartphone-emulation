@@ -75,3 +75,7 @@
 ### 스케줄 관리
 
 - [사전 필요 지식 조사 및 계획, 일정](https://github.com/hochan222/smartphone-emulation/issues/1)
+
+### smartphone emulation 구현 후기
+
+- [smartphone emulation](https://egas.tistory.com/128)

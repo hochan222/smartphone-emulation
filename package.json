@@ -31,7 +31,8 @@
   },
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack",
+    "build-dev": "webpack --mode development",
+    "build": "webpack --mode production --config webpack.production.config.js",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
   },
