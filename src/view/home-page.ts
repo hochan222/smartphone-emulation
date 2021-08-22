@@ -15,9 +15,9 @@ const appIconWrapper = (appName: string, appRoute: string): string => {
 const homeWrapper = (navigation: string, apps: string): string => {
   return `<div class="home">
             ${navigation}
-            <div class="home-inner">
+            <nav class="home-inner">
               ${apps}
-            </div>
+            </nav>
           </div>`;
 };
 

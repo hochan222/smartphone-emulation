@@ -3,10 +3,12 @@
 ### 공통
 
 - [x] 바닐라 스크립트로 작성 (ES5, ES6, Typescript만 사용)
-- [ ] Chrome 최신버전에서 동작 확인
+- [x] Chrome 최신버전에서 동작 확인
 - [x] 패키지 모듈관리는 npm만 사용
-- [ ] polyfill, webpack, Testing framework 외의 다른 패키지 사용 금지
+- [x] polyfill, webpack, Testing framework 외의 다른 패키지 사용 금지
 - [ ] 적절한 마크업 구조 및 태그 사용
+  - [x] nav
+  - [ ] article
 - 검토 사항
   - [ ] 테스트 코드 작성
   - [ ] 코드 구조, 코딩 스타일 리펙토링
