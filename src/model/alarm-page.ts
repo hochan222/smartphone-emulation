@@ -40,14 +40,3 @@ export default {
     localStorage.setItem(key, JSON.stringify([...alarmData]));
   },
 };
-
-// removeLocalStorageAlarmData(key: string, alarmMeridiem: string, alarmHour: string, alarmMinute: string): void {
-//   const alarmData = this.getLocalStorageAlarmData('alarmData');
-//   if (!alarmData) {
-//     return;
-//   }
-//   const refinedAlarmData = alarmData.filter(({ meridiem, hour, minute }) => {
-//     return alarmMeridiem !== meridiem || alarmHour !== hour || alarmMinute !== minute;
-//   });
-//   localStorage.setItem(key, JSON.stringify([...refinedAlarmData]));
-// },

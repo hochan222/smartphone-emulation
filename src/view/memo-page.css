@@ -1,0 +1,28 @@
+.memo__input {
+  display: block;
+  width: 279px;
+  height: 20px;
+}
+
+.memo__list-element {
+  margin: 0;
+  padding: 0 1px;
+
+  max-height: 2.3rem;
+
+  font-size: 1rem;
+  text-align: left;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+
+  color: black;
+  border-top: 0.5px solid blue;
+  background-color: white;
+}
+
+.memo__list-element--open {
+  max-height: max-content;
+  overflow: visible;
+}
