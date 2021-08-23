@@ -1,14 +1,14 @@
-import { $, getCurrentDate } from './utils';
+import getNavigationWrapper from '../view/navigation';
 import { renderAlarmPage } from '../view/alarm-page';
 import { renderMemoPage } from '../view/memo-page';
 import renderPhotoPage from '../view/photo-page';
 import renderHomePage from '../view/home-page';
-import homePageController from '../controller/home-page';
 import alarmPageController from '../controller/alarm-page';
-import memoPageController from '../controller/memo-page';
 import photoPageController from '../controller/photo-page';
-import getNavigationWrapper from '../view/navigation';
+import homePageController from '../controller/home-page';
+import memoPageController from '../controller/memo-page';
 import { ROUTE_EMPTY_ERROR } from './constants';
+import { $, getCurrentDate } from './utils';
 
 const historyRouter = (route: string | undefined): void => {
   if (!route) {
