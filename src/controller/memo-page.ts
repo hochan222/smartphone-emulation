@@ -1,8 +1,8 @@
+import { memoInputWrapper, renderMemoList } from '../view/memo-page';
 import { MEMO_EMPTY_MESSAGE_ERROR } from '../@shared/constants';
 import { historyRouterBack } from '../@shared/router';
 import { $ } from '../@shared/utils';
 import model from '../model';
-import { memoInputWrapper, renderMemoList } from '../view/memo-page';
 
 const keypressMemoSubmitButton = (event: KeyboardEvent): void => {
   const memoInputElement = $('#memo__input') as HTMLInputElement;

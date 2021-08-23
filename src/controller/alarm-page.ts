@@ -1,6 +1,6 @@
+import { alarmInputWrapper, renderAlarmList } from '../view/alarm-page';
 import { historyRouterBack } from '../@shared/router';
 import { $, getElementIndex } from '../@shared/utils';
-import { alarmInputWrapper, renderAlarmList } from '../view/alarm-page';
 import model from '../model';
 
 const clickAlarmSubmitButton = (): void => {

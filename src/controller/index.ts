@@ -1,8 +1,8 @@
-import { historyRouter } from '../@shared/router';
 import { $, atoi, getCurrentDate } from '../@shared/utils';
-import model from '../model';
 import { renderAlarmList } from '../view/alarm-page';
+import { historyRouter } from '../@shared/router';
 import homePageController from './home-page';
+import model from '../model';
 
 const NotifyAlarm = (currentDate: string): void => {
   const currentHour = atoi(currentDate.split(' ')[3] as string) as string;

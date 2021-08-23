@@ -1,5 +1,5 @@
-import { $, historyPushState } from '../@shared/utils';
 import { BROWSER_TITLE, HOME_DRAG_ERROR } from '../@shared/constants';
+import { $, historyPushState } from '../@shared/utils';
 import { historyRouter } from '../@shared/router';
 import model from '../model';
 
