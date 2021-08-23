@@ -1,5 +1,6 @@
 import { $ } from '../@shared/utils';
 import model from '../model';
+
 import './memo-page.css';
 
 const memoInputWrapper = (): string => {

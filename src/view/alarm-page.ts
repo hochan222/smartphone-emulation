@@ -1,6 +1,7 @@
+import { IalarmData } from '../model/interface';
 import { $, padStart } from '../@shared/utils';
 import model from '../model';
-import { IalarmData } from '../model/interface';
+
 import './alarm-page.css';
 
 const meridiemOptionData = [

@@ -1,5 +1,6 @@
-import { $ } from '../@shared/utils';
 import { images, spiderMan } from '../assets/index';
+import { $ } from '../@shared/utils';
+
 import './photo-page.css';
 
 const imageTagWrapper = ({ src, name }: { src: string; name: string }): string => {

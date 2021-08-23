@@ -1,4 +1,5 @@
 import { IgetNavigationWrapper } from '../model/interface';
+
 import './navigation.css';
 
 const getNavigationWrapper = ({ currentTime, backButton, newButton }: IgetNavigationWrapper): string => {
