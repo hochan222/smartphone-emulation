@@ -72,6 +72,9 @@ const alarmWrapper = (navigation: string, apps: string): string => {
 const renderAlarmList = (): void => {
   const alarmInnerElement = $('.alarm-inner') as HTMLDivElement;
 
+  if (!alarmInnerElement) {
+    return;
+  }
   alarmInnerElement.innerHTML = '';
   alarmInnerElement.insertAdjacentHTML('beforeend', alarmListWrapper());
 };

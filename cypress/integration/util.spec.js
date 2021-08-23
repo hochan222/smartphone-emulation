@@ -16,7 +16,7 @@ describe('padStart polyfill test', () => {
   });
 });
 
-describe('padStart atoi test', () => {
+describe('atoi test', () => {
   it('숫자가 없을떄, null', () => {
     assert.equal(atoi('hello'), null);
     assert.equal(atoi(''), null);
