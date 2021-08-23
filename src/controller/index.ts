@@ -20,12 +20,7 @@ const NotifyAlarm = (currentDate: string): void => {
       minute === currentMinute
     ) {
       alert(`[알림] ${meridiem === 'pm' ? '오후' : '오전'} ${currentHour}시 ${currentMinute}분입니다.`);
-      model.removeLocalStorageAlarmData(
-        'alarmData',
-        +currentHour > 12 ? 'pm' : 'am',
-        +currentHour > 12 ? String(+currentHour - 12) : currentHour,
-        currentMinute,
-      );
+      model.removeLocalStorageAlarmData('alarmData', meridiem, hour, minute);
       renderAlarmList();
     }
   });
